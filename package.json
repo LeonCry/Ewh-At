@@ -39,7 +39,7 @@
     "test:watch": "pnpm run test --watch",
     "install-maestro": "curl -Ls 'https://get.maestro.mobile.dev' | bash",
     "e2e-test": "maestro test .maestro/ -e APP_ID=com.obytes.development",
-    "cc": "git add . && pnpm cz"
+    "cz": "git add . && pnpm git-cz"
   },
   "dependencies": {
     "@expo/metro-runtime": "^3.2.3",
@@ -101,6 +101,7 @@
     "@typescript-eslint/parser": "^5.62.0",
     "babel-plugin-module-resolver": "^5.0.2",
     "cross-env": "^7.0.3",
+    "cz-git": "^1.11.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.1.2",
@@ -133,5 +134,10 @@
   "packageManager": "pnpm@9.8.0",
   "osMetadata": {
     "initVersion": "6.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
